@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>TFM_Exe</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Alberto López del Amo Gorgojo" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="description" content="TFM Domótica e IoT" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-single-page"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<header id="header">
+<div id="headerContent">
+<h1>TFM_Exe</h1>
+</div>
+</header>
+<section id="main">
+<article class="node level-1-node" id="exe-node-0">
+<header class="nodeDecoration">
+<h1 id="exenode_0_PrcticasDomotizacindelAula" class="nodeTitle">Prácticas Domotización del Aula</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0-0">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Introducción</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_114_2" class="block iDevice_content">
+<div class="exe-text"><p>A continuación, se presenta todo el contenido necesario para realizar las prácticas sobre "Domotización del aula" con la herramienta de <em>Home Assistant</em>. Estas prácticas provienen de la realización de mi Trabajo Fin de Máster para el MAES (UGR).</p>
+<p>Estas prácticas consisten en mostrar a alumnos de secundaria el mundo de la domótica, quitándoles el posible "miedo" y mostrándoles lo accesible que puede llegar a ser la domótica.</p>
+<p>Aparte de trabajar con la domótica y el <em>Internet of Things </em>(IoT), se busca la reflexión sobre el <em>Internet of Behaviors </em>(IoB), un término no tan conocido: la capacidad que tienen estos dispositivos inteligentes en modificar nuestros comportamientos, ya sea a mejor o a peor.</p>
+<p>Además, se presentará la idea del turismo sostenible, juntando el IoT y el IoB para domotizar hoteles y comprobar los hábitos de estudiantes cuando van de vacaciones.</p>
+<p>Todo ello viene reflejado en el siguiente logotipo, al que se recurrirá a lo largo de las prácticas:</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id1-0">
+<div class="iDevice emphasis0" >
+<div id="ta1_115_2" class="block iDevice_content">
+<div class="exe-text"><p><img src="Logo_TFM_3.png" alt="" title="Logotipo del Trabajo Fin de Máster." width="533" height="533" style="display: block; margin-left: auto; margin-right: auto;" /></p></div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-1">
+<header class="nodeDecoration">
+<h1 id="exenode_1_Organizacin" class="nodeTitle">Organización</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id2-1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Estructura</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_116_2" class="block iDevice_content">
+<div class="exe-text"><p>Idealmente, las sesiones necesarias para llevar a cabo esta actividad son cinco:</p>
+<ul>
+<li>Dos sesiones teóricas:
+<ul>
+<li>Una primera que explique todos los conceptos que se van a estudiar: Domótica, <em>Internet of Things, </em>automatización, <em>Internet of Behaviors, </em>Turismo sostenible, etc. Para ello, se dispone de una presentación.</li>
+<li>La segunda sesión se usará para presentar todas las herramientas con las que se va a trabajar, dividir los grupos de trabajo y asignar el material correspondiente. También dispone de una presentación.</li>
+</ul>
+</li>
+<li>Dos sesiones prácticas:
+<ul>
+<li>La primera de ellas para programar sensores y actuadores que vaya a utilizar cada uno.</li>
+<li>En la segunda sesión se buscará la realización de automatizaciones coherentes con los sensores, buscando la reducción de consumo. Si sobrara tiempo, se buscaría añadir <em>Telegram </em>para la realización de dichas automatizaciones.</li>
+</ul>
+</li>
+<li>Una última sesión donde cada grupo presente el trabajo realizado,  se realice un breve cuestionario de evaluación y un debate sobre las ideas vistas durante la práctica.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id3-1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Hardware</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_117_2" class="block iDevice_content">
+<div class="exe-text"><p>El material utilizado para la implementación de esta actividad ha sido el siguiente:</p>
+<ul>
+<li>Una Raspberry Pi 4 con 8GB de memoria RAM. Cualquier otro modelo podría servir. </li>
+<li>Un microcontrolador ESP32 para cada grupo de estudiantes. Modelos similares con conectividad WiFi también valdrían.</li>
+<li>Sensores y actuadores compatibles con el microcontrolador elegido.</li>
+<li>Cables y <em>protoboards </em>suficientes para las necesidades de los circuitos a realizar.</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id4-1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Software</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_118_2" class="block iDevice_content">
+<div class="exe-text"><p>Las herramientas <em>software </em>que se van a utilizar son las siguientes:</p>
+<ul>
+<li><em>Home Assistant</em> como base para crear el sistema domótico inalámbrico.</li>
+<li><em>ESPHome</em>, un complemento de <em>Home Assistant</em> que permite la configuración sencilla de las microcontroladoras.</li>
+<li><em>NodeRED, </em>otro complemento que facilita la conexión de <em>Home Assistant </em>con<em> Telegram.</em></li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-3">
+<header class="nodeDecoration">
+<h1 id="exenode_3_PresentacinTerica" class="nodeTitle">Presentación Teórica</h1>
+</header>
+<article class="iDevice_wrapper textIdevice" id="id8-3">
+<div class="iDevice emphasis0" >
+<div id="ta8_122_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: center;"><iframe width="1200" height="600" src="Presentacion_Domotica_V4.pdf"></iframe><br /><br /><br /></p></div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-4">
+<header class="nodeDecoration">
+<h1 id="exenode_4_PresentacinPrctica" class="nodeTitle">Presentación Práctica</h1>
+</header>
+<article class="iDevice_wrapper textIdevice" id="id9-4">
+<div class="iDevice emphasis0" >
+<div id="ta9_123_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: center;"><iframe width="1200" height="600" src="Presentacion_Practica_V1.pdf"></iframe></p></div>
+</div>
+</div>
+</article>
+</article>
+</section>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+
+
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body>
+</html>
